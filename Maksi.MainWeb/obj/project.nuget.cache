@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "9JZpDS9vakiFDFB8L2zw5gFeOt4TiCkVgd0iEhqlPBTAeMiakycqHnM+6id82J06hisdDnAv+fdt2QttugdKOg==",
+  "success": true,
+  "projectFilePath": "/home/maksi/Studying/Maksi/Maksi.MainWeb/Maksi.MainWeb.csproj",
+  "expectedPackageFiles": [
+    "/home/maksi/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0/microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/maksi/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/maksi/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
