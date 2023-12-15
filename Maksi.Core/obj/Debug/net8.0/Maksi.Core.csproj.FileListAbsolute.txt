@@ -1,0 +1,15 @@
+/home/maksi/Studying/Maksi/Maksi.Core/bin/Debug/net8.0/Maksi.Core.deps.json
+/home/maksi/Studying/Maksi/Maksi.Core/bin/Debug/net8.0/Maksi.Core.runtimeconfig.json
+/home/maksi/Studying/Maksi/Maksi.Core/bin/Debug/net8.0/Maksi.Core.dll
+/home/maksi/Studying/Maksi/Maksi.Core/bin/Debug/net8.0/Maksi.Core.pdb
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.csproj.AssemblyReference.cache
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.AssemblyInfoInputs.cache
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.AssemblyInfo.cs
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.csproj.CoreCompileInputs.cache
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.sourcelink.json
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.dll
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/refint/Maksi.Core.dll
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.pdb
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.genruntimeconfig.cache
+/home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/ref/Maksi.Core.dll

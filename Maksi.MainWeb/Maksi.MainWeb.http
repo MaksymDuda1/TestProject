@@ -1,4 +1,4 @@
-@Maksi.MainWeb_HostAddress = http://localhost:5023
+@Maksi.MainWeb_HostAddress = http://localhost:5094
 
 GET {{Maksi.MainWeb_HostAddress}}/weatherforecast/
 Accept: application/json

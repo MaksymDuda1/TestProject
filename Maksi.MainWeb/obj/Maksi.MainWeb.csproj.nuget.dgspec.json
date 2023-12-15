@@ -4,14 +4,14 @@
     "/home/maksi/Studying/Maksi/Maksi.MainWeb/Maksi.MainWeb.csproj": {}
   },
   "projects": {
-    "/home/maksi/Studying/Maksi/Maksi.MainWeb/Maksi.MainWeb.csproj": {
+    "/home/maksi/Studying/Maksi/Maksi.Core/Maksi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/maksi/Studying/Maksi/Maksi.MainWeb/Maksi.MainWeb.csproj",
-        "projectName": "Maksi.MainWeb",
-        "projectPath": "/home/maksi/Studying/Maksi/Maksi.MainWeb/Maksi.MainWeb.csproj",
+        "projectUniqueName": "/home/maksi/Studying/Maksi/Maksi.Core/Maksi.Core.csproj",
+        "projectName": "Maksi.Core",
+        "projectPath": "/home/maksi/Studying/Maksi/Maksi.Core/Maksi.Core.csproj",
         "packagesPath": "/home/maksi/.nuget/packages/",
-        "outputPath": "/home/maksi/Studying/Maksi/Maksi.MainWeb/obj/",
+        "outputPath": "/home/maksi/Studying/Maksi/Maksi.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/maksi/.nuget/NuGet/NuGet.Config"
@@ -38,7 +38,94 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/maksi/Studying/Maksi/Maksi.MainWeb/Maksi.MainWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/maksi/Studying/Maksi/Maksi.MainWeb/Maksi.MainWeb.csproj",
+        "projectName": "Maksi.MainWeb",
+        "projectPath": "/home/maksi/Studying/Maksi/Maksi.MainWeb/Maksi.MainWeb.csproj",
+        "packagesPath": "/home/maksi/.nuget/packages/",
+        "outputPath": "/home/maksi/Studying/Maksi/Maksi.MainWeb/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/maksi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/maksi/Studying/Maksi/Maksi.Core/Maksi.Core.csproj": {
+                "projectPath": "/home/maksi/Studying/Maksi/Maksi.Core/Maksi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
@@ -66,7 +153,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/228/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
