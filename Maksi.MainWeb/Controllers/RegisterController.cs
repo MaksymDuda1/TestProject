@@ -21,6 +21,7 @@ public class RegisterController: Controller
 
         if (userToAdd != null)
         {
+            Console.WriteLine("Hello");
             return Conflict($"User already exists");
         }
 
