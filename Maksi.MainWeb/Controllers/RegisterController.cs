@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Maksi.MainWeb.Controllers;
 
+[Route("api/register")]
 public class RegisterController: Controller
 {
     private MaksiDbContext context;
