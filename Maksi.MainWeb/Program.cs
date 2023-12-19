@@ -1,3 +1,4 @@
+using System.Reflection;
 using Maksi.Core;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<MaksiDbContext>(opt =>
     opt.UseSqlite(connectionString));
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 

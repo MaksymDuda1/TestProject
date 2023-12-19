@@ -129,3 +129,5 @@
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/Maksi.MainWeb.pdb
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/Maksi.MainWeb.genruntimeconfig.cache
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/ref/Maksi.MainWeb.dll
+/home/maksi/Studying/Maksi/Maksi.MainWeb/bin/Debug/net8.0/AutoMapper.dll
+/home/maksi/Studying/Maksi/Maksi.MainWeb/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
