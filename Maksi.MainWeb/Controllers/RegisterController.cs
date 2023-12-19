@@ -1,4 +1,3 @@
-using AutoMapper;
 using Maksi.Core;
 using Maksi.Core.Models;
 using Maksi.MainWeb.Dtos;
@@ -11,12 +10,10 @@ namespace Maksi.MainWeb.Controllers;
 public class RegisterController: Controller
 {
 
-    private readonly IMapper mapper;
     private MaksiDbContext context;
     
-    public RegisterController(MaksiDbContext dbContext, IMapper mapper )
+    public RegisterController(MaksiDbContext dbContext )
     {
-        this.mapper = mapper;
         this.context = dbContext;
     }
 
@@ -30,7 +27,7 @@ public class RegisterController: Controller
             return BadRequest($"User already exists");
         }
 
-        var entity = mapper.Map<User>(user);
+        var entity = user.ToEntity();
         
         context.Users.Add(entity);
         context.SaveChangesAsync();
