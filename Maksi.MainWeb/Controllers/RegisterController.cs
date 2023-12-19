@@ -17,22 +17,22 @@ public class RegisterController: Controller
     public RegisterController(MaksiDbContext dbContext, IMapper mapper )
     {
         this.mapper = mapper;
-        this.context = context;
+        this.context = dbContext;
     }
 
-    public async Task<IActionResult> Post([FromBody] UserDto user)
+    [HttpPost]
+    public IActionResult Post([FromBody] UserDto user)
     {
-        User userToAdd = await context.Users.FirstOrDefaultAsync(u => user.Email == u.Email);
+        var isRegistered =  context.Users.Any(u => u.Email == user.Email);
 
-        if (userToAdd != null)
+        if (isRegistered)
         {
-            Console.WriteLine("Hello");
-            return Conflict($"User already exists");
+            return BadRequest($"User already exists");
         }
 
         var entity = mapper.Map<User>(user);
+        
         context.Users.Add(entity);
-
         context.SaveChangesAsync();
 
         return Created("", entity);

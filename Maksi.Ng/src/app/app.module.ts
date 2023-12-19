@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule } from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-
+import {MatSnackBarModule} from '@angular/material/snack-bar'
 import { RouterModule } from '@angular/router';
 
 import { TopMenuComponent } from './top-menu/top-menu.component';
@@ -37,7 +37,9 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatCardModule, 
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
