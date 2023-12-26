@@ -29,7 +29,7 @@ export class RegisterComponent {
 
     this.userService.register(user).subscribe(data => 
       {
-        this.snackBar.open("User registred", "Close");
+        this.snackBar.open("User is registred", "Close");
       },errorResult =>{
         this.errorMessage = errorResult.error;
       }); 

@@ -1,6 +1,7 @@
 using Maksi.Core;
 using Maksi.Core.Models;
 using Maksi.MainWeb.Dtos;
+using Maksi.MainWeb.EntityExtensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -32,6 +33,6 @@ public class RegisterController: Controller
         context.Users.Add(entity);
         context.SaveChangesAsync();
 
-        return Created("", entity);
+        return Created("", entity.ToDto());
     }
 }
