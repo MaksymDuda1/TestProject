@@ -2,6 +2,7 @@
 using Maksi.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Maksi.Core.Migrations
 {
     [DbContext(typeof(MaksiDbContext))]
-    partial class MaksiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231226140918_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
@@ -30,28 +33,6 @@ namespace Maksi.Core.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Teacher"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Student"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Parent"
-                        });
                 });
 
             modelBuilder.Entity("Maksi.Core.Models.User", b =>
@@ -71,14 +52,6 @@ namespace Maksi.Core.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Email = "admin",
-                            Password = "admin"
-                        });
                 });
 
             modelBuilder.Entity("Maksi.Core.Models.UserRole", b =>
@@ -100,14 +73,6 @@ namespace Maksi.Core.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            RoleId = 1,
-                            UserId = 1
-                        });
                 });
 
             modelBuilder.Entity("Maksi.Core.Models.UserRole", b =>
