@@ -3,9 +3,15 @@
 /workspace.xml
 # Rider ignored files
 /contentModel.xml
+<<<<<<< HEAD
 /.idea.Maksi.Core.iml
 /projectSettingsUpdater.xml
 /modules.xml
+=======
+/projectSettingsUpdater.xml
+/modules.xml
+/.idea.Maksi.iml
+>>>>>>> 16ba997 (Test)
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files

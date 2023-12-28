@@ -114,7 +114,10 @@
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/Maksi.MainWeb.csproj.CoreCompileInputs.cache
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/Maksi.MainWeb.MvcApplicationPartsAssemblyInfo.cs
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/Maksi.MainWeb.MvcApplicationPartsAssemblyInfo.cache
+<<<<<<< HEAD
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/Maksi.MainWeb.sourcelink.json
+=======
+>>>>>>> 16ba997 (Test)
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/staticwebassets.build.json
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/staticwebassets.development.json
 /home/maksi/Studying/Maksi/Maksi.MainWeb/obj/Debug/net8.0/staticwebassets/msbuild.Maksi.MainWeb.Microsoft.AspNetCore.StaticWebAssets.props

@@ -7,7 +7,10 @@
 /home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.AssemblyInfoInputs.cache
 /home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.AssemblyInfo.cs
 /home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
 /home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.sourcelink.json
+=======
+>>>>>>> 16ba997 (Test)
 /home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.dll
 /home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/refint/Maksi.Core.dll
 /home/maksi/Studying/Maksi/Maksi.Core/obj/Debug/net8.0/Maksi.Core.pdb
