@@ -12,6 +12,7 @@ public class ProtectedController : Controller
     public IActionResult Get()
     {
         var sidClaim = User.Claims.FirstOrDefault(p => p.Type == ClaimTypes.Sid);
+        Console.WriteLine(sidClaim);
 
         var id = int.Parse(sidClaim.Value);
         

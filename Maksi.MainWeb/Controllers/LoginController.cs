@@ -27,15 +27,15 @@ public class LoginController : Controller
     {
         var entity = user.ToEntity();
 
-        var userDB = context.Users.FirstOrDefaultAsync(u => u.Email == entity.Email
+        var userDB = context.Users.FirstOrDefault(u => u.Email == entity.Email
                                                             && user.Password == entity.Password);
 
-        if (entity == null)
+        if (userDB == null)
         {
             return BadRequest("User name or password are incorrect");
         }
 
-        var token = CreateToken(entity);
+        var token = CreateToken(userDB );
 
         return Ok(token);
     }
@@ -46,9 +46,23 @@ public class LoginController : Controller
 
         var claims = new List<Claim>();
 
+        var userRoles = context.UserRoles
+            .Include(p => p.Role)
+            .Where(p => p.UserId == entity.Id)
+            .ToList();
+
+        var roles = userRoles
+            .Select(p => p.Role).ToList();
+
         claims.Add(new Claim(ClaimTypes.Sid, entity.Id.ToString()));
         claims.Add(new Claim(ClaimTypes.Email, entity.Email));
 
+        foreach (var role in roles)
+        {
+            claims.Add(new Claim(ClaimTypes.Role, role.Name));
+            Console.WriteLine(role.Name);
+        }
+        
         var identity = new ClaimsIdentity(claims);
 
         var jwtSecret = configuration["JwtSecret"]!;

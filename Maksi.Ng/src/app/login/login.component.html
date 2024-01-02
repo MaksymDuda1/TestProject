@@ -1,1 +1,36 @@
-<p>login works!</p>
+<form>
+    <mat-card>
+        <mat-card-header> Login</mat-card-header>
+        <mat-card-content>
+
+
+            <div class="row">
+                <div class="col-sm-6">
+
+                    <mat-form-field>
+                        <input matInput name="email" placeholder="Please input email" [(ngModel)]="email"/>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-sm-6">
+
+                    <mat-form-field>
+                        <input matInput name="password" type="password" placeholder="Please input password" [(ngModel)]="password"/>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <div class="row">
+                <mat-error *ngIf="errorMessage">{{errorMessage}}</mat-error>
+            </div>
+
+        </mat-card-content>
+        <mat-card-footer>
+            <button mat-raised-button (click)="onLogin()">Login</button>
+        </mat-card-footer>
+    </mat-card>
+</form>

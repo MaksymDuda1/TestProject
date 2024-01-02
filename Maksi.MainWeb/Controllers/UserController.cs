@@ -12,12 +12,10 @@ namespace Maksi.MainWeb.Controllers;
 public class UserController : Controller
 {
     private readonly MaksiDbContext context;
-    private readonly IMapper mapper;
 
-    public UserController(MaksiDbContext context, IMapper mapper)
+    public UserController(MaksiDbContext context)
     {
         this.context = context;
-        this.mapper = mapper;
     }
     
     [HttpGet]
@@ -29,10 +27,10 @@ public class UserController : Controller
     }
 
     [HttpPost]
-    public IActionResult Post([FromBody] UserDto user)
+    public IActionResult Post([FromBody] User user)
     {
-        var entity = mapper.Map<User>(user);
-        context.Users.Add(entity);
+        
+        context.Users.Add(user);
         context.SaveChangesAsync();
         
         return Created();

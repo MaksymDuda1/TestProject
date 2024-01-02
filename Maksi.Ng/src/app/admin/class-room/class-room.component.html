@@ -1,0 +1,34 @@
+<button mat-raised-button color="primary" class="add-btn">Add</button> 
+
+
+<table mat-table [dataSource]="list$">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>#</th>
+      <td mat-cell *matCellDef="let element">{{element.id}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{element.name}}</td> 
+    </ng-container>
+  
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element">
+
+            <button mat-raised-button color="primary" class="action-btn">Detail</button> 
+            <button mat-raised-button color="primary" class="action-btn">Edit</button> 
+            <button mat-raised-button color="primary" class="action-btn">Delete</button> 
+
+        </td> 
+      </ng-container>
+    
+
+
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  
+  </table>
+  
+  

@@ -1,4 +1,5 @@
 using System.Data.Common;
+using Maksi.Core.Converters;
 using Maksi.Core.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -47,7 +48,9 @@ public class MaksiDbContext : DbContext
             {
                 Id = 1,
                 Email = "admin",
-                Password = "admin"
+                Password = "admin",
+                FirstName = "admin",
+                LastName = "admin"
             });
 
         modelBuilder.Entity<UserRole>()
@@ -61,11 +64,33 @@ public class MaksiDbContext : DbContext
        base.OnModelCreating(modelBuilder);
     }
 
-    
+
+
+    public DbSet<ClassRoom> ClassRooms { get; set; }
+
+    public DbSet<Grade> Grades { get; set; }
+
+    public DbSet<Schedule> Schedules { get; set; }
+
+    public DbSet<Subject> Subjects { get; set; }
+
+    public DbSet<TeacherOfSubject> TeacherOfSubjects { get; set; }
 
     public DbSet<User> Users { get; set; }
     
     public DbSet<Role> Roles { get; set; }
 
     public DbSet<UserRole> UserRoles { get; set; }
+
+    protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+    {
+        base.ConfigureConventions(configurationBuilder);
+        
+        configurationBuilder.Properties<DateOnly>()
+            .HaveConversion<DateOnlyConverter>();
+
+        configurationBuilder.Properties<TimeOnly>()
+            .HaveConversion<TimeOnlyConverter>();
+    }
 }
+

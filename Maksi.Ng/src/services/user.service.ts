@@ -1,7 +1,7 @@
 import {HttpClient} from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { RegisterUser, User } from "src/models/user";
+import { RegisterUser, User } from "@models/user";
 
 @Injectable({ providedIn : "root"})
 export class UserService 

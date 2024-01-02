@@ -1,6 +1,13 @@
 <mat-toolbar>
+    <ng-template *ngIf= "!isAdmin">
     <button mat-raised-button color="primary" [routerLink]="'/register'" class="toolbar-btn">Register</button> 
     <button mat-raised-button color="primary" [routerLink]="'/login'" class="toolbar-btn">Login</button>
+    </ng-template>
+    <span class = "span-expander">
+    <button *ngIf ="isAdmin" mat-raised-button color="primary" [routerLink]="'/admin'" class="toolbar-btn">Open admin</button>
+    <button *ngIf ="isAdmin" mat-raised-button color="primary" [routerLink]="'/sign-out'" class="toolbar-btn">Sign out</button>
+
+    </span>
 </mat-toolbar>
 
 

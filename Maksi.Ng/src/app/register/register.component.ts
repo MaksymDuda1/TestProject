@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { RegisterUser, User } from 'src/models/user';
-import { UserService } from 'src/services/user.service';
+import { RegisterUser, User } from '@models/user';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'app-register',
