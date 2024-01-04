@@ -19,7 +19,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 function jwtFactory(localService : LocalService){
   return {
     tokenGetter :() => {
-      return localService.get("auth-token");
+      return localService.get(LocalService.AuthTokenName);
     }
   }
 }

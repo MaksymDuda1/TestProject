@@ -15,8 +15,9 @@ export class TopMenuComponent implements OnInit{
     private localService: LocalService){
 
   }
+
   ngOnInit(): void {
-    let token = this.localService.get("auth-token");
+    let token = this.localService.get(LocalService.AuthTokenName);
 
     console.log(token)
 
@@ -28,5 +29,10 @@ export class TopMenuComponent implements OnInit{
       console.log(data.role);
       
     }
+  }
+
+  onSignOut(){
+     this.localService.remove(LocalService.AuthTokenName);
+     window.location.href="/";
   }
 }

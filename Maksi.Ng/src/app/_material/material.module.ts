@@ -8,6 +8,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 import { MatTableModule } from "@angular/material/table";
+import { MatDialogModule } from "@angular/material/dialog";
 
 
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
@@ -22,7 +23,8 @@ import { NoopAnimationsModule } from "@angular/platform-browser/animations";
         MatSnackBarModule,
         MatSidenavModule,
         MatListModule,
-        MatTableModule
+        MatTableModule,
+        MatDialogModule
     ]
 })
 

@@ -1,6 +1,7 @@
 using Maksi.Core;
 using Maksi.MainWeb.Dtos;
 using Maksi.MainWeb.EntityExtensions;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Maksi.MainWeb.Controllers;
@@ -44,6 +45,11 @@ public class ClassRoomController : Controller
     [HttpPost]
     public IActionResult Create([FromBody] ClassRoomDto data)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest($"{nameof(ClassRoomDto)} isn't valid");
+        }
+
         var entity = data.ToEntity();
 
         context.ClassRooms.Add(entity);
@@ -54,9 +60,17 @@ public class ClassRoomController : Controller
         return Created($"/api/class-room/{dto.Id}", dto);
     }
 
+
+
     [HttpPut]
     public IActionResult Update([FromBody] ClassRoomDto data)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest($"{nameof(ClassRoomDto)} isn't valid");
+        }
+
+
         var entity = context.ClassRooms.SingleOrDefault(p => p.Id == data.Id);
 
         if (entity == null)
@@ -85,6 +99,20 @@ public class ClassRoomController : Controller
 
         return Ok();
     }
+    
+    /*private IActionResult ReturnBadRequestWithErrors()
+    {
+        var errors = new List<string>();
+
+        foreach (var state in ModelState)
+        {
+            errors.AddRange(
+                state.Value.Errors.Select(p => p.ErrorMessage));
+        }
+
+        return  BadRequest(new { errorList = errors });
+    }*/
+
 
 
 }

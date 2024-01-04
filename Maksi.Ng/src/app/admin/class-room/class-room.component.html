@@ -1,4 +1,4 @@
-<button mat-raised-button color="primary" class="add-btn">Add</button> 
+<button mat-raised-button color="primary" [routerLink]="'/admin/class-room/add'" class="add-btn">Add</button> 
 
 
 <table mat-table [dataSource]="list$">
@@ -17,9 +17,9 @@
         <th mat-header-cell *matHeaderCellDef>Actions</th>
         <td mat-cell *matCellDef="let element">
 
-            <button mat-raised-button color="primary" class="action-btn">Detail</button> 
-            <button mat-raised-button color="primary" class="action-btn">Edit</button> 
-            <button mat-raised-button color="primary" class="action-btn">Delete</button> 
+            <button mat-raised-button color="basic" class="action-btn">Detail</button> 
+            <button mat-raised-button color="primary" class="action-btn" [routerLink]="'/admin/class-room/edit/' + element.id">Edit</button> 
+            <button mat-raised-button color="warn" (click)="onShowConfirmDelete(element.id)" class="action-btn">Delete</button> 
 
         </td> 
       </ng-container>
